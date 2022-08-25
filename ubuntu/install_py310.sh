@@ -3,7 +3,7 @@ sudo apt-get install -y libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdb
 
 # Install python
 cd /tmp/
-wget https://www.python.org/ftp/python/3.10.5/Python-3.10.6.tar.xz
+wget https://www.python.org/ftp/python/3.10.6/Python-3.10.6.tar.xz
 tar -xf Python-3.10.6.tar.xz
 cd Python-3.10.6
 ./configure
