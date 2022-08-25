@@ -11,8 +11,8 @@ Linux 自動安裝與設定等腳本
 
 `sh set_locale.sh` - 設定時區跟語系至 Asia/Taipei zh_TW.UTF-8
 
-`sh install_py310.sh` - 安裝python3.10.5
+`sh install_py310.sh` - 安裝python3.10.6
 
 `sh install_nodejs16.sh` - 安裝nodejs 16
 
-`sh UbuntuConfigAndInstallApp.sh` - 照順序執行上方全部script
+`sh run_all.sh` - 照順序執行上方全部script
