@@ -16,4 +16,14 @@ Linux 自動安裝與設定等腳本
 
 `sh install_nodejs16.sh` - 安裝nodejs 16
 
-`sh run_all.sh` - 照順序執行上方全部script
+`sh run_base.sh` - 照順序執行上方全部script
+
+# 其餘安裝腳本
+
+`sh install_php80.sh` - 安裝php8.0與附屬套件，並設定自動啟動php8.0-fpm
+
+`sh install_php81.sh` - 安裝php8.1與附屬套件，並設定自動啟動php8.1-fpm
+
+安裝php時會自帶安裝apache2
+
+`sh install_composer.sh` - 安裝composer

@@ -14,7 +14,9 @@ Linux 自動安裝與設定等腳本
 
 `sh install_nodejs16.sh` - 安裝nodejs 16
 
-`sh run_without_docker.sh` - 照順序執行上方全部script (不包含docker/portainer)
+`sh run_base.sh` - 照順序執行上方全部script
+
+# 其餘安裝腳本
 
 `sh install_docker.sh` - 安裝docker (安裝docker後須重新登入)
 
