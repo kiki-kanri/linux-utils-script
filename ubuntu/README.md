@@ -24,7 +24,7 @@ Linux 自動安裝與設定等腳本
 
 `sh install_php81.sh` - 安裝php8.1與附屬套件，並設定自動啟動php8.1-fpm
 
-安裝php時會自帶安裝apache2
+安裝php時會自帶安裝apache2 (PHP8.0)
 
 `sh install_composer.sh` - 安裝composer
 
