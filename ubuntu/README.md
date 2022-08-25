@@ -1,4 +1,5 @@
 # linux-utils-script
+
 Linux 自動安裝與設定等腳本
 
 目前只確定支援Ubuntu 版本20.04，20.04以下版本與22.04尚未確定

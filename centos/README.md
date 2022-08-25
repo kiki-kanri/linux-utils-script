@@ -1,4 +1,5 @@
 # linux-utils-script
+
 Linux 自動安裝與設定等腳本
 
 目前只確定支援Centos 7 其餘版本尚未確定
