@@ -20,9 +20,7 @@ Linux 自動安裝與設定等腳本
 
 # 其餘安裝腳本
 
-`sh install_php80.sh` - 安裝php8.0與附屬套件，並設定自動啟動php8.0-fpm
-
-`sh install_php81.sh` - 安裝php8.1與附屬套件，並設定自動啟動php8.1-fpm
+`sh install_php8.sh` - 安裝php8，可選8.0或8.1與附屬套件，並設定自動啟動fpm
 
 安裝php時會自帶安裝apache2 (PHP8.0)
 
