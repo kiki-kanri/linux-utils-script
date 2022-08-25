@@ -2,7 +2,7 @@
 
 Linux 自動安裝與設定等腳本
 
-目前只確定支援Ubuntu 版本20.04，20.04以下版本與22.04尚未確定
+目前確定支援Ubuntu 版本20.04與22.04
 
 執行腳本時產生的檔案在/tmp/目錄
 
@@ -27,3 +27,5 @@ Linux 自動安裝與設定等腳本
 安裝php時會自帶安裝apache2
 
 `sh install_composer.sh` - 安裝composer
+
+`sh install_mariadb.sh` - 安裝mariadb server 10.9
