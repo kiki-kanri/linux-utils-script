@@ -3,7 +3,7 @@
 
 read -p "輸入安裝php版本(8.0/8.1)：" php_version
 
-if [ $os_id = "centos"]; then
+if [ $os_id = "centos" ]; then
 	sudo yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 	sudo yum install -y yum-utils
 	sudo yum-config-manager --disable 'remi-php*'
