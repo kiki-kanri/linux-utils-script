@@ -8,7 +8,11 @@ Linux 自動安裝與設定等腳本
 
 使用方法:
 
-`sh upgrade_package.sh` - 更新apt套件與安裝基礎app
+nginx、php-fpm、mariadb會在安裝完成時設定開機自動啟動
+
+`sh upgrade_package.sh` - 更新套件
+
+`sh install_base_packages.sh` - 安裝基礎套件(下列安裝所需)
 
 `sh set_locale.sh` - 設定時區跟語系至 Asia/Taipei zh_TW.UTF-8
 
@@ -16,7 +20,7 @@ Linux 自動安裝與設定等腳本
 
 `sh install_nodejs.sh` - 安裝nodejs(可選版本)
 
-`sh install_php8.sh` - 安裝php8，可選8.0或8.1與附屬套件，並設定自動啟動fpm，安裝php時會自帶安裝apache2 (PHP8.0)
+`sh install_php8.sh` - 安裝php8與附屬套件，可選8.0或8.1，安裝php時會自帶安裝apache2 (PHP8.0)
 
 `sh install_composer.sh` - 安裝composer
 
