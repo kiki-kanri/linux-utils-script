@@ -1,6 +1,6 @@
 # Install composer
 
-php --version > /dev/null || (echo "Can't use php command! Check your php installation." && exit)
+php --version > /dev/null || { echo "Can't use php command! Check your php installation."; exit; }
 
 sh ./upgrade_package.sh
 cd /tmp/
