@@ -2,7 +2,8 @@
 . ./get_os_version.sh
 
 sh ./upgrade_package.sh
-sudo $pgm install -y docker
+([ $os_id = "centos" ] && d="") || d=".io"
+sudo $pgm install -y docker$d
 grep docker /etc/group || sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl stop docker
