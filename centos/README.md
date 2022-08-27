@@ -23,3 +23,11 @@ Linux 自動安裝與設定等腳本
 `sh install_docker.sh` - 安裝docker (安裝docker後須重新登入)
 
 `sh install_portainer.sh` - 安裝portainer
+
+`sh install_php8.sh` - 安裝php8，可選8.0或8.1與附屬套件，並設定自動啟動fpm
+
+安裝php時會自帶安裝apache2 (PHP8.0)
+
+`sh install_composer.sh` - 安裝composer
+
+`sh install_mariadb.sh` - 安裝mariadb server 10.9
