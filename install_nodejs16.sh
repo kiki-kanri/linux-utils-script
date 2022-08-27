@@ -1,7 +1,9 @@
-# Install nodejs 16
+# Install nodejs
 . ./get_os_version.sh
 
-([ $os_id = "centos" ] && url="https://rpm.nodesource.com/setup_16.x") || url="https://deb.nodesource.com/setup_16.x"
+read -p "輸入安裝Node版本(14~18)：" node_version
+
+([ $os_id = "centos" ] && url="https://rpm.nodesource.com/setup_$node_version.x") || url="https://deb.nodesource.com/setup_$node_version.x"
 
 cd /tmp/ && \
 curl -fsSL $url | sudo bash - && \
