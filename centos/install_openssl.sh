@@ -10,4 +10,4 @@ sudo ln -s /usr/local/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1
 cd /tmp/
 rm openssl-1.1.1q.tar.gz
 sudo rm -rf openssl-1.1.1q
-cd 
+cd $(pwd)

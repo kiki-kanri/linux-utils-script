@@ -1,8 +1,7 @@
 # Install docker
 . ./get_os_version.sh
 
-sudo $pgm update -y
-[ $os_id = "ubuntu" ] && sudo $pgm upgrade -y
+sh ./upgrade_package.sh
 sudo $pgm install -y docker
 grep docker /etc/group || sudo groupadd docker
 sudo usermod -aG docker $USER

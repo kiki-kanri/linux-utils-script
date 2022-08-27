@@ -22,4 +22,4 @@ sudo python3.10 -m pip install pip --upgrade
 cd /tmp/
 rm -rf Python-3.10.6.tar.xz
 sudo rm -rf Python-3.10.6
-cd
+cd $(pwd)

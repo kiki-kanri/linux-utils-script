@@ -5,4 +5,4 @@ sudo bash mariadb_repo_setup --mariadb-server-version=10.9 && \
 sudo $pgm update -y && \
 sudo $pgm install -y mariadb-server && \
 sudo systemctl enable mariadb
-cd
+cd $(pwd)
