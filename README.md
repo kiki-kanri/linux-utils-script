@@ -26,6 +26,6 @@ nginx、php-fpm、mariadb會在安裝完成時設定開機自動啟動
 
 `sh install_mariadb.sh` - 安裝mariadb server 10.9
 
-`sh install_docker.sh` - 安裝docker，Centos安裝完後須重新登入整理權限
+`sh install_docker.sh` - 安裝docker，安裝完後須重新登入整理權限
 
 `sh install_portainer.sh` - 安裝portainer
