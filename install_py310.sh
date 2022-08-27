@@ -22,4 +22,6 @@ sudo python3.10 -m pip install pip --upgrade
 cd /tmp/
 rm -rf Python-3.10.6.tar.xz
 sudo rm -rf Python-3.10.6
+cd /usr/lib/python3/dist-packages
+sudo ln -s apt_pkg.cpython-310-x86_64-linux-gnu.so apt_pkg.so
 cd $(pwd)
