@@ -1,4 +1,4 @@
-# Set timezone and locale
+# Set locale and timezone to zh_TW.UTF-8 and Asia/Taipei
 
 sudo yum -y install kde-l10n-Chinese telnet
 sudo yum -y reinstall glibc-common
