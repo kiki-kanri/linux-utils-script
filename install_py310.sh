@@ -19,7 +19,7 @@ cd /tmp/ && \
 wget https://www.python.org/ftp/python/$python_version/$python_tar && \
 tar -xf $python_tar && \
 sudo mv $python_dir /opt/ && \
-rm -rf $python_tar
+rm -rf $python_tar && \
 cd /opt/$python_dir && \
 ./configure --enable-optimizations --enable-shared && \
 sudo make altinstall && \
