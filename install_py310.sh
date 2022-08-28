@@ -1,26 +1,28 @@
 # Install python 3.10.6
 . ./get_os_version.sh
 
+python_version="3.10.6"
+python_tar="Python-$python_version.tar.xz"
+python_dir="Python-$python_version"
+
 # Install python require package
 if [ $os_id = "centos" ]; then
 	sudo $pgm -y install zlib-devel libffi-devel ncurses-devel gdbm-devel xz-devel sqlite-devel tk-devel uuid-devel readline-devel bzip2-devel libffi-devel openssl11 openssl11-devel
 	sh ./centos/install_openssl.sh
 else
-	sudo $pgm install -y libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev build-essential gcc make zlib1g-dev libreadline-dev pkg-config
+	sudo $pgm install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev libbz2-dev pkg-config
 fi
 
 # Install python
 cd /tmp/ && \
-wget https://www.python.org/ftp/python/3.10.6/Python-3.10.6.tar.xz && \
-tar -xf Python-3.10.6.tar.xz && \
-cd Python-3.10.6 && \
+wget https://www.python.org/ftp/python/$python_version/$python_tar && \
+tar -xf $python_tar && \
+sudo mv $python_dir /opt/ && \
+cd /opt/$python_dir && \
 ./configure --enable-optimizations --enable-shared && \
 make && sudo make altinstall && \
-sudo ln -s /usr/local/bin/python3.10 /bin/python3.10
-sudo ln -s /usr/local/bin/python3.10-config /bin/python3.10-config
+sudo ldconfig /opt/$python_dir
 sudo python3.10 -m pip install pip --upgrade
-# [ $os_id = "ubuntu" ] && sudo ldconfig /tmp/Python-3.10.6
 cd /tmp/
-rm -rf Python-3.10.6.tar.xz
-sudo rm -rf Python-3.10.6
+rm -rf $python_tar
 cd $(pwd)
