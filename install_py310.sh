@@ -19,9 +19,10 @@ make && sudo make altinstall && \
 sudo ln -s /usr/local/bin/python3.10 /bin/python3.10
 sudo ln -s /usr/local/bin/python3.10-config /bin/python3.10-config
 sudo python3.10 -m pip install pip --upgrade
+[ $os_id = "ubuntu" ] && sudo ldconfig /tmp/Python-3.10.6
 cd /tmp/
 rm -rf Python-3.10.6.tar.xz
 sudo rm -rf Python-3.10.6
-cd /usr/lib/python3/dist-packages
+# cd /usr/lib/python3/dist-packages
 # sudo ln -s apt_pkg.cpython-310-x86_64-linux-gnu.so apt_pkg.so
 cd $(pwd)
