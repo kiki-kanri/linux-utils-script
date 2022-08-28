@@ -6,7 +6,7 @@ if [ $os_id = "centos" ]; then
 	sudo cp ./centos/nginx.repo /etc/yum.repos.d/nginx.repo
 else
 	cd /tmp/
-	sudo $pgm install gnupg2 ca-certificates lsb-release ubuntu-keyring
+	sudo $pgm install -y gnupg2 ca-certificates lsb-release ubuntu-keyring
 	curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
 	| sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg > /dev/null
 	gpg --dry-run --quiet --import --import-options import-show /usr/share/keyrings/nginx-archive-keyring.gpg
