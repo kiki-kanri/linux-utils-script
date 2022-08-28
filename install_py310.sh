@@ -7,6 +7,7 @@ python_dir="Python-$python_version"
 
 # Install python require package
 if [ $os_id = "centos" ]; then
+	sudo $pgm groupinstall -y "Development Tools"
 	sudo $pgm -y install zlib-devel libffi-devel ncurses-devel gdbm-devel xz-devel sqlite-devel tk-devel uuid-devel readline-devel bzip2-devel libffi-devel openssl11 openssl11-devel
 	sh ./centos/install_openssl.sh
 else
@@ -18,11 +19,12 @@ cd /tmp/ && \
 wget https://www.python.org/ftp/python/$python_version/$python_tar && \
 tar -xf $python_tar && \
 sudo mv $python_dir /opt/ && \
+rm -rf $python_tar
 cd /opt/$python_dir && \
 ./configure --enable-optimizations --enable-shared && \
-make && sudo make altinstall && \
+sudo make altinstall && \
 sudo ldconfig /opt/$python_dir
+sudo ln -s /usr/local/bin/python3.10 /bin/python3.10
+sudo ln -s /usr/local/bin/python3.10-config /bin/python3.10-config
 sudo python3.10 -m pip install pip --upgrade
-cd /tmp/
-rm -rf $python_tar
 cd $(pwd)
