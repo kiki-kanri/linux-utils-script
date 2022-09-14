@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install nodejs
 . ./get_os_version.sh
 
@@ -9,8 +11,8 @@ else
 	url="https://deb.nodesource.com/setup_$node_version.x"
 fi
 
-cd /tmp/ && \
-curl -fsSL $url | sudo bash - && \
-sudo $pgm install -y nodejs && \
-sudo npm i npm@latest -g && \
-cd $(pwd)
+cd /tmp/ &&
+	curl -fsSL $url | sudo bash - &&
+	sudo $pgm install -y nodejs &&
+	sudo npm i npm@latest -g &&
+	cd $(pwd)

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install openssl1.1.1
 cd /tmp/
 wget https://www.openssl.org/source/openssl-1.1.1q.tar.gz

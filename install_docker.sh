@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install docker
 . ./get_os_version.sh
 

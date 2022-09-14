@@ -1,7 +1,9 @@
-# Install python 3.10.6
+#!/bin/bash
+
+# Install python 3.10.7
 . ./get_os_version.sh
 
-python_version="3.10.6"
+python_version="3.10.7"
 python_tar="Python-$python_version.tar.xz"
 python_dir="Python-$python_version"
 

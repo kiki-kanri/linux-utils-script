@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install php8.0 or 8.1
 . ./get_os_version.sh
 

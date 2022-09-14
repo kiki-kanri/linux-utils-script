@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Upgrade packages and install base packages
 . ./get_os_version.sh
 
