@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Install python 3.10.8
+# Install python 3.11.0
 . ./get_os_version.sh
 
-python_version="3.10.8"
+python_version="3.11.0"
 python_tar="Python-$python_version.tar.xz"
 python_dir="Python-$python_version"
 
@@ -26,7 +26,7 @@ cd /opt/$python_dir && \
 ./configure --enable-optimizations --enable-shared && \
 sudo make altinstall && \
 sudo ldconfig /opt/$python_dir
-sudo ln -s /usr/local/bin/python3.10 /bin/python3.10
-sudo ln -s /usr/local/bin/python3.10-config /bin/python3.10-config
-sudo python3.10 -m pip install pip --upgrade
+sudo ln -s /usr/local/bin/python3.11 /bin/python3.11
+sudo ln -s /usr/local/bin/python3.11-config /bin/python3.11-config
+sudo python3.11 -m pip install pip --upgrade
 cd $(pwd)
