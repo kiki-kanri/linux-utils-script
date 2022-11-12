@@ -13,6 +13,6 @@ fi
 
 cd /tmp/ &&
 	curl -fsSL $url | sudo bash - &&
-	sudo $pgm install -y nodejs &&
+	sudo $pgm $install_command -y nodejs &&
 	sudo npm i npm@latest -g &&
 	cd $(pwd)

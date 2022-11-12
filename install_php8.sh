@@ -17,6 +17,6 @@ else
 	php_v="php$php_version"
 fi
 
-sudo bash -c "sudo $pgm install -y $php_v $php_v-{bcmath,cli,common,curl,fpm,gd,imap,mbstring,mysql,readline,redis,xml,zip}"
-[ $os_id = "centos" ] && sudo $pgm install -y php-json php-perl
+sudo bash -c "sudo $pgm $install_command -y $php_v $php_v-{bcmath,cli,common,curl,fpm,gd,imap,mbstring,mysql,readline,redis,xml,zip}"
+[ $os_id = "centos" ] && sudo $pgm $install_command -y php-json php-perl
 sudo systemctl enable $php_v-fpm
