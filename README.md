@@ -4,9 +4,9 @@ Linux 自動安裝與設定等腳本
 
 目前支援:
 
-[ ] alpine3.8+
-[x] centos7
-[x] Ubuntu 20.04 22.04
+- [ ] alpine3.8+
+- [x] centos7
+- [x] Ubuntu 20.04 22.04
 
 執行腳本時產生的檔案在/tmp/目錄
 
