@@ -6,8 +6,7 @@
 cd /tmp/
 curl -LsS -O https://downloads.mariadb.com/MariaDB/mariadb_repo_setup &&
     sudo bash mariadb_repo_setup --mariadb-server-version=10.9 &&
-    sudo $pgm $install_command -y &&
-    sudo $pgm $install_command -y mariadb-server &&
-    sudo systemctl enable mariadb
+    packages="mariadb-server" && service="mariadb" &&
+    installPackages && enableService
 
 cd $(pwd)

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. ./utils.sh
+
 export os_id=$(grep "^ID=" /etc/os-release | cut -d'=' -f2 | tr -d '"')
 export os_version=$(grep "^VERSION_ID=" /etc/os-release | cut -d'=' -f2 | tr -d '"')
 

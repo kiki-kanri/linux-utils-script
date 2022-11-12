@@ -5,7 +5,8 @@
 
 sh ./upgrade_package.sh
 ([ $os_id = "centos" ] && d="") || d=".io"
-sudo $pgm $install_command -y docker$d
+packages="docker$d"
+installPackages
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl stop docker

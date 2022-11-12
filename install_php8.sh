@@ -12,11 +12,13 @@ if [ $os_id = "centos" ]; then
 	sudo yum-config-manager --enable remi-php$(printf $php_version | tr -d ".")
 	php_v="php"
 else
-	sudo apt-get install -y lsb-release ca-certificates apt-transport-https software-properties-common
+	packages="lsb-release ca-certificates apt-transport-https software-properties-common"
+	installPackages
 	sudo add-apt-repository ppa:ondrej/php
 	php_v="php$php_version"
 fi
 
-sudo bash -c "sudo $pgm $install_command -y $php_v $php_v-{bcmath,cli,common,curl,fpm,gd,imap,mbstring,mysql,readline,redis,xml,zip}"
-[ $os_id = "centos" ] && sudo $pgm $install_command -y php-json php-perl
-sudo systemctl enable $php_v-fpm
+packages="$php_v-{bcmath,cli,common,curl,fpm,gd,imap,mbstring,mysql,readline,redis,xml,zip} $php_v"
+[ $os_id = "centos" ] && packages="$packages php-json php-perl"
+service="$php_v-fpm"
+installPackages && enableService

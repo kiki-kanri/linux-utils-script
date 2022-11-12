@@ -17,6 +17,6 @@ else
 	cd $(pwd)
 fi
 
-sudo $pgm $install_command -y
-sudo $pgm $install_command -y nginx
-sudo systemctl enable nginx
+packages="nginx"
+service="nginx"
+installPackages && enableService
