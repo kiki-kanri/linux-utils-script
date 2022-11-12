@@ -2,7 +2,11 @@
 
 Linux 自動安裝與設定等腳本
 
-目前支援centos7與Ubuntu 20.04 22.04
+目前支援:
+
+[ ] alpine3.8+
+[x] centos7
+[x] Ubuntu 20.04 22.04
 
 執行腳本時產生的檔案在/tmp/目錄
 
@@ -20,7 +24,7 @@ nginx、php-fpm、mariadb會在安裝完成時設定開機自動啟動
 
 `sh install_nodejs.sh` - 安裝nodejs(可選版本)
 
-`sh install_php8.sh` - 安裝php8與附屬套件，可選8.0或8.1，安裝php時會自帶安裝apache2 (PHP8.0)
+`sh install_php8.sh` - 安裝php8與附屬套件，可選8.0或8.1
 
 `sh install_composer.sh` - 安裝composer
 
